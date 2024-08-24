@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wait for Multiple Promises</title>
+    <title>Promise.all Example</title>
 </head>
 <body>
-    <table id="resultsTable" border="1">
-        <tr>
-            <td colspan="2" id="loadingText">Loading...</td>
-        </tr>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Promise</th>
+                <th>Time Taken (seconds)</th>
+            </tr>
+        </thead>
+        <tbody id="promiseTable">
+            <tr id="loadingRow">
+                <td colspan="2">Loading...</td>
+            </tr>
+        </tbody>
     </table>
 
-    <!-- Link to the external JavaScript file -->
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
