@@ -23,17 +23,18 @@ Promise.all(promises).then(results => {
     const totalTime = ((Date.now() - startTime) / 1000).toFixed(3);
 
     // Remove loading row
-    document.getElementById('loadingRow').remove();
+    document.getElementById('loading').remove();
 
     // Populate the table with the results
+    const output = document.getElementById('output');
     results.forEach(result => {
         const row = document.createElement('tr');
         row.innerHTML = `<td>Promise ${result.promiseNumber}</td><td>${result.time}</td>`;
-        document.getElementById('promiseTable').appendChild(row);
+        output.appendChild(row);
     });
 
     // Add the total row
     const totalRow = document.createElement('tr');
     totalRow.innerHTML = `<td>Total</td><td>${totalTime}</td>`;
-    document.getElementById('promiseTable').appendChild(totalRow);
+    output.appendChild(totalRow);
 });
